@@ -9,3 +9,8 @@ I'm building this website in such a way that If a user loads/lands on the site, 
 As I add to this website, I will also update the readme file with explanations behind certain choices in this build. 
 
 Run Python script python3 -m http.server in order to see a preview of the project. 
+
+I'm arranging the website to have a four photo hero image under the following;
+Songwriting/Producing, Mixing, Photography, Videography
+
+Needs Hover Functions within javascript to enhance user activity. 

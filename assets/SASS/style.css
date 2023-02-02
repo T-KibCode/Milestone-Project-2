@@ -1,9 +1,3 @@
-/* Master styling classes */
-
-.hover {
-    
-}
-
 /* Split the screen in half */
 .split {
     height: 100%;
@@ -38,6 +32,6 @@
   
   /* Style the image inside the centered container, if needed */
   .centered img {
-    width: 400px;
+    width: 500px;
     border-radius: 50%;
   }
