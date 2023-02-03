@@ -1,37 +1,7 @@
-/* Split the screen in half */
-.split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-  
-  /* Control the left side */
-  .left {
-    left: 0;
-    background-color: rgba(46, 232, 161, 0.579);
-  }
-  
-  /* Control the right side */
-  .right {
-    right: 0;
-    background-color: rgba(112, 119, 252, 0.427);
-  }
-  
-  /* If you want the content centered horizontally and vertically */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  /* Style the image inside the centered container, if needed */
-  .centered img {
-    width: 500px;
-    border-radius: 50%;
-  }
+/* Lead Background Photo Image */
+.img !{
+  background-position: center;
+  position: fixed;
+  max-width:fit-content;
+
+}
