@@ -1,19 +1,117 @@
-const buttons = document.querySelector("[data-carousel-button")
+const canvas = document.querySelector('canvas');
+const c = canvas.getContext('2d');
 
-/* event lisenter used for swapping to the next imate*/
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const offset = button.dataset.carousel1button === "next ? 1 : -1"
-        const slides = button
-        .closest("[data-carousel]")
-        .querySelector("[data-slides]")
+canvas.width = 1000
+canvas.height = 576
 
-    const activeSlide = slides.querySelector("[data-active]")
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-    if (newIndex < 0) newIndex = slides.children.length - 1 ;
-    if (newIndex >= slides.children.length) newIndex = 0;
+c.fillRect(0, 0, canvas.width, canvas.height)
 
-    slides.children[newIndex].dataset.active = true 
-    delete activeSlide.dataset.active
-    })
+const gravity = 0.2
+class Sprite {
+    constructor({position, velocity}) {
+        this.position = position
+        this.velocity = velocity
+        this.height = 150
+    }
+
+    draw() {
+        c.fillStyle = 'red'
+        c.fillRect(this.position.x, this.position.y, 50, this.height)
+    }
+
+    update() {
+        this.draw()
+        
+        this.position.x += this.velocity.x
+        this.position.y += this.velocity.y 
+
+        if (this.position.y + this.height + this.velocity.y >= canvas.height) {
+            this.velocity.y = 0
+        } else this.velocity.y += gravity
+    }
+}
+
+const player = new Sprite({
+    position: {
+        x: 0,
+        y: 0,
+    },
+    velocity: {
+        x:0,
+        y:0
+    }
 })
+
+player.draw()
+
+const enemy = new Sprite({
+    position: {
+        x: 400,
+        y: 100,
+    },
+    velocity: {
+        x:0,
+        y:0
+    }
+})
+
+enemy.draw()
+
+console.log(player);
+
+const keys= {
+    a: {
+        pressed: false
+    }, 
+    d: {
+        pressed: false
+    }
+}
+
+let lastKey
+
+//* function that tracks 
+
+function animate() {
+    window.requestAnimationFrame(animate)
+    c.fillStyle = 'black'
+    c.fillRect(0, 0, canvas.width, canvas.height)
+    player.update()
+    enemy.update()
+
+    if (key.a.pressed) {
+        player.velocity.x = -1
+    } else if (keys.d.pressed) {
+        player.velocity.x = 1
+    }
+}
+
+
+//* event listeners that track when a button input for the game is pressed and depressed based on true/false values //*
+animate()
+
+window.addEventListener('keydown'), (event) => {
+    switch(event.key) {
+        case 'd':
+            keys.d.pressed = true
+            lastKey = 'd'
+            break
+        case 'a':
+            keys.a.pressed = true
+            lastKey = 'a' 
+            break
+    }
+    console.log(event.key);
+}
+
+window.addEventListener('keyup'), (event) => {
+    switch(event.key) {
+        case 'd':
+            key.d.pressed = false
+            break
+        case 'a':
+            key.a.pressed = false
+            break
+    }
+    console.log(event.key);
+}
