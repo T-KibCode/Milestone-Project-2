@@ -90,7 +90,7 @@ function animate() {
 //* event listeners that track when a button input for the game is pressed and depressed based on true/false values //*
 animate()
 
-window.addEventListener('keydown'), (event) => {
+window.addEventListener('keydown', (event) => {
     switch(event.key) {
         case 'd':
             keys.d.pressed = true
@@ -102,16 +102,16 @@ window.addEventListener('keydown'), (event) => {
             break
     }
     console.log(event.key);
-}
+})
 
-window.addEventListener('keyup'), (event) => {
+window.addEventListener('keyup', (event) => {
     switch(event.key) {
         case 'd':
-            key.d.pressed = false
+            keys.d.pressed = false
             break
         case 'a':
-            key.a.pressed = false
+            keys.a.pressed = false
             break
     }
     console.log(event.key);
-}
+})
