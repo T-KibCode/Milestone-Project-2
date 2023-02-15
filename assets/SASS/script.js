@@ -129,12 +129,22 @@ window.addEventListener('keydown', (event) => {
 
 window.addEventListener('keyup', (event) => {
     switch(event.key) {
+        // player key off events
         case 'd':
             keys.d.pressed = false
             break
         case 'a':
             keys.a.pressed = false
             break
+
+        // enemy key off 
+        case 'ArrowRight':
+            keys.ArrowRight.pressed = false
+            break
+        case 'ArrowLeft':
+            keys.ArrowLeft.pressed = false
+            break
+
         
     }
     console.log(event.key);
