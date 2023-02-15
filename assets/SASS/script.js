@@ -94,7 +94,7 @@ animate()
 
 //* event listeners that track when a button input for the game is pressed and depressed based on true/false values //*
 
-
+//* Player character control *//
 window.addEventListener('keydown', (event) => {
     switch(event.key) {
         case 'd':
@@ -108,6 +108,21 @@ window.addEventListener('keydown', (event) => {
         case 'w':
             player.velocity.y = -10
             break
+
+
+        //* enemy character control *//
+        case 'ArrowRight':
+            keys.ArrowRight.pressed = true
+            enemy.lastKey = 'ArrowRight'
+            break
+        case 'ArrowLeft':
+            keys.ArrowLeft.pressed = true
+            enemy.lastKey = 'ArrowLeft' 
+            break
+        case 'ArrowUp':
+            enemy.velocity.y = -10
+            break
+
     }
     console.log(event.key);
 })
