@@ -79,16 +79,21 @@ function animate() {
     player.update()
     enemy.update()
 
-    if (key.a.pressed) {
+    player.velocity.x = 0
+
+    if (keys.a.pressed && lastKey=== 'a') {
         player.velocity.x = -1
-    } else if (keys.d.pressed) {
+    } else if (keys.d.pressed && lastKey === 'd') {
         player.velocity.x = 1
     }
 }
 
+animate()
+
+
 
 //* event listeners that track when a button input for the game is pressed and depressed based on true/false values //*
-animate()
+
 
 window.addEventListener('keydown', (event) => {
     switch(event.key) {
@@ -115,3 +120,4 @@ window.addEventListener('keyup', (event) => {
     }
     console.log(event.key);
 })
+
