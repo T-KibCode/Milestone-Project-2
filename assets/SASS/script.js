@@ -6,17 +6,27 @@ canvas.height = 576
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
-const gravity = 0.2
+const gravity = 0.7
 class Sprite {
     constructor({position, velocity}) {
         this.position = position
         this.velocity = velocity
         this.height = 150
+        this.lastKey
+        this.attackBox = {
+            position: this.position,  
+            width: 100,
+            height: 50
+        }
     }
 
     draw() {
         c.fillStyle = 'red'
         c.fillRect(this.position.x, this.position.y, 50, this.height)
+
+        // This is where Attack box is drawm
+
+        c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.position.width, this.attackBox.position.height)
     }
 
     update() {
@@ -68,7 +78,7 @@ const keys= {
     }
 }
 
-let lastKey
+
 
 //* function that tracks 
 
@@ -80,11 +90,12 @@ function animate() {
     enemy.update()
 
     player.velocity.x = 0
+    enemy.velocity.x = 0
 
     if (keys.a.pressed && player.lastKey=== 'a') {
-        player.velocity.x = -4
+        player.velocity.x = -5
     } else if (keys.d.pressed && player.lastKey === 'd') {
-        player.velocity.x = 4
+        player.velocity.x = 5
     }
 }
 
@@ -106,7 +117,7 @@ window.addEventListener('keydown', (event) => {
             player.lastKey = 'a' 
             break
         case 'w':
-            player.velocity.y = -10
+            player.velocity.y = -20
             break
 
 
