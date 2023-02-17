@@ -8,7 +8,7 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 
 const gravity = 0.7
 class Sprite {
-    constructor({position, velocity}) {
+    constructor({position, velocity, color = 'red'}) {
         this.position = position
         this.velocity = velocity
         this.height = 150
@@ -62,7 +62,8 @@ const enemy = new Sprite({
     velocity: {
         x:0,
         y:0
-    }
+    },
+    color: 'blue'
 })
 
 enemy.draw()
@@ -96,6 +97,13 @@ function animate() {
         player.velocity.x = -5
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
+    }
+
+
+     if (keys.ArrowLeft.pressed && enemy.lastKey=== 'ArrowLeft') {
+        enemy.velocity.x = -5
+    } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
+        enemy.velocity.x = 5
     }
 }
 
