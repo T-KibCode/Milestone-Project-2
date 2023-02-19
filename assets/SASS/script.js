@@ -76,6 +76,12 @@ const keys= {
     }, 
     d: {
         pressed: false
+    },
+    ArrowRight: {
+        pressed: false
+    },
+    ArrowLeft: {
+        pressed: false
     }
 }
 
@@ -93,10 +99,19 @@ function animate() {
     player.velocity.x = 0
     enemy.velocity.x = 0
 
-    if (keys.a.pressed && player.lastKey=== 'a') {
+    //* player movement per pixel direction dependent *//
+
+    if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -5
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
+    }
+
+    //* Enemy movement per pixel direction depedent *//
+    if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
+        enemy.velocity.x = -5
+    } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
+        enemy.velocity.x = 5
     }
 
     //detect for collision//
@@ -125,7 +140,7 @@ window.addEventListener('keydown', (event) => {
             player.lastKey = 'a' 
             break
         case 'w':
-            player.velocity.y = -20
+            player.velocity.y = -15
             break
 
 
@@ -139,7 +154,7 @@ window.addEventListener('keydown', (event) => {
             enemy.lastKey = 'ArrowLeft' 
             break
         case 'ArrowUp':
-            enemy.velocity.y = -10
+            enemy.velocity.y = -15
             break
 
     }
@@ -155,12 +170,18 @@ window.addEventListener('keyup', (event) => {
         case 'a':
             keys.a.pressed = false
             break
+        case 'w':
+            keys.w.pressed = false
+            break
 
         // enemy key off 
         case 'ArrowRight':
             keys.ArrowRight.pressed = false
             break
         case 'ArrowLeft':
+            keys.ArrowLeft.pressed = false
+            break
+        case 'ArrowUp':
             keys.ArrowLeft.pressed = false
             break
 
