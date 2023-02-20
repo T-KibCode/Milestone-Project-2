@@ -160,17 +160,27 @@ function animate() {
 
 
     // detect collision //
-    if  (
-        player.attackBox.position.x + player.attackBox.width >= enemy.position.x && 
-        player.attackBox.position.x <= enemy.position.x + enemy.width && 
-        player.attackBox.position.y + player.attackBox.height >= enemy.position.y && 
-        player.attackBox.position.y <= enemy.position.y + enemy.height && 
+    if(
+        rectangularCollision({
+        rectangle1: player,
+        rectangle2: enemy,
+    }) &&
         player.isAttacking
-        ) {
-            player.isAttacking = false
-        console.log('go')
+    ) {
+        player.isAttacking = false
+        console.log('playerattack successful')
     }
 
+    if(
+        rectangularCollision({
+        rectangle1: enemy,
+        rectangle2: player,
+    }) &&
+        player.isAttacking
+    ) {
+        enemy.isAttacking = false
+        console.log('enemyattack successful')
+    }
 }
 
 animate()
@@ -193,6 +203,9 @@ window.addEventListener('keydown', (event) => {
         case 'w':
             player.velocity.y = -15
             break
+        case ' ':
+            player.attack()
+            break
 
 
         //* enemy character control *//
@@ -206,6 +219,9 @@ window.addEventListener('keydown', (event) => {
             break
         case 'ArrowUp':
             enemy.velocity.y = -15
+            break
+        case 'ArrowDown':
+            enemy.isAttacking = true
             break
 
     }
@@ -236,8 +252,10 @@ window.addEventListener('keyup', (event) => {
             keys.ArrowLeft.pressed = false
             break
         case 'ArrowUp':
-            keys.ArrowLeft.pressed = false
+            keys.ArrowUp.pressed = false
             break
+        case 'ArrowDown':
+    
 
         
     }
