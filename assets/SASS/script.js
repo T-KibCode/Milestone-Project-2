@@ -73,7 +73,7 @@ const player = new Sprite({
     velocity: {
         x:0,
         y:0
-    }
+    },
     offset: {
         x:0,
         y:0
@@ -91,7 +91,7 @@ const enemy = new Sprite({
         x:0,
         y:0
     },
-    color: {'blue'}
+    color: 'blue',
     offset: {
         x:-50,
         y:0
