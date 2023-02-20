@@ -16,7 +16,7 @@ class Sprite {
         this.attackBox = {
             position: this.position,  
             width: 100,
-            height: 50
+            height: 50,
         }
         this.color = color
     }
@@ -25,13 +25,15 @@ class Sprite {
         c.fillStyle = this.color
         c.fillRect(this.position.x, this.position.y, 50, this.height)
 
-        // This is where Attack box is drawm
-        c.fillStyle = 'green'
+        // This is where Attack box is drawn //
+        
+        c.fillStyle = 'green';
         c.fillRect(
             this.attackBox.position.x,
-            this.attackBox.position.y, 
+            this.attackBox.position.y,
             this.attackBox.position.width, 
-            this.attackBox.position.height)
+            this.attackBox.position.height
+        );
     }
 
     update() {
@@ -75,7 +77,7 @@ enemy.draw()
 
 console.log(player);
 
-const keys= {
+const keys = {
     a: {
         pressed: false
     }, 
@@ -92,7 +94,7 @@ const keys= {
 
 
 
-//* function that tracks 
+//* function that tracks*// 
 
 function animate() {
     window.requestAnimationFrame(animate)
@@ -119,12 +121,7 @@ function animate() {
         enemy.velocity.x = 5
     }
 
-    //detect for collision//
 
-    if (player.attackBox.position.x + player.attackBox.width >= enemy.position.x)
-    {
-    console.log()
-    }
 }
 
 animate()
