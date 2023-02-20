@@ -46,7 +46,7 @@ class Sprite {
 
     update() {
         this.draw()
-        this.attackBox.position.x = this.position.x + this,this.attackBox.offset.x
+        this.attackBox.position.x = this.position.x + this.attackBox.offset.x
         this.attackBox.position.y = this.position.y 
         
         this.position.x += this.velocity.x
@@ -117,9 +117,21 @@ const keys = {
     }
 }
 
+//* rectangular collision *// 
 
+function rectangularCollision({ rectangle1, rectangle2 }) {
+    return (
+        rectangle1.attackBox.position.x + rectangle1.attackBox.width >= 
+            rectangle2.position.x && 
+        rectangle1.attackBox.position.x <= 
+            rectangle2.position.x + rectangle2.width && 
+        rectangle1.attackBox.position.y + rectangle1.attackBox.height >= 
+            rectangle2.position.y && 
+        rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
+    )
+}
 
-//* function that tracks*// 
+//* function that tracks *// 
 
 function animate() {
     window.requestAnimationFrame(animate)
@@ -155,6 +167,7 @@ function animate() {
         player.attackBox.position.y <= enemy.position.y + enemy.height && 
         player.isAttacking
         ) {
+            player.isAttacking = false
         console.log('go')
     }
 
