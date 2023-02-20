@@ -77,7 +77,7 @@ const player = new Sprite({
     offset: {
         x:0,
         y:0
-    }
+    },
 })
 
 player.draw()
@@ -91,11 +91,11 @@ const enemy = new Sprite({
         x:0,
         y:0
     },
-    color: 'blue'
+    color: {'blue'}
     offset: {
         x:-50,
         y:0
-    }
+    },
 })
 
 enemy.draw()
