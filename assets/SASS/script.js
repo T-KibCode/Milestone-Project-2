@@ -39,8 +39,8 @@ class Sprite {
                 this.attackBox.position.x,
                 this.attackBox.position.y,
                 this.attackBox.position.width, 
-                this.attackBox.position.height
-           )
+                this.attackBox.position.height,
+            )
         }
     }
 
