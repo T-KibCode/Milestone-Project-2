@@ -168,7 +168,7 @@ function animate() {
         player.isAttacking
     ) {
         player.isAttacking = false
-        console.log('playerattack successful')
+        document.querySelector('#enemyHealth').style.width = '20%'
     }
 
     if(
@@ -176,10 +176,10 @@ function animate() {
         rectangle1: enemy,
         rectangle2: player,
     }) &&
-        player.isAttacking
+        enemy.isAttacking
     ) {
         enemy.isAttacking = false
-        console.log('enemyattack successful')
+        console.log('enemy attack successful')
     }
 }
 
