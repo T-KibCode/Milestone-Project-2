@@ -225,7 +225,7 @@ window.addEventListener('keydown', (event) => {
             break
 
     }
-    console.log(event.key);
+    
 })
 
 window.addEventListener('keyup', (event) => {
@@ -241,7 +241,7 @@ window.addEventListener('keyup', (event) => {
             keys.w.pressed = false
             break
         case ' ':
-            player.attack
+            player.attack()
             break
 
         // enemy key off 
@@ -255,10 +255,12 @@ window.addEventListener('keyup', (event) => {
             keys.ArrowUp.pressed = false
             break
         case 'ArrowDown':
+            enemy.isAttacking = true
+            break
     
 
         
     }
-    console.log(event.key);
+    
 })
 
