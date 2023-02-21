@@ -7,9 +7,34 @@
   <title>Deadly Combat</title>
 </head>
 <body>
-  <canvas id="'canvas">
-
-  </canvas>
+  <!--Red container Div-->
+  <div style="position: relative;">
+    <!--Smaller Red container Div-->
+    <div  
+      style="
+        position: absolute; 
+        display: flex; 
+        width: 100%; 
+        align-items: center;
+      "
+    ></div>
+      <!--Player Health-->
+      <div style="background-color: yellow; height: 30px; width: 100%;"></div>
+      <!--timer-->
+      <div 
+        style="
+          background-color: red; 
+          width: 100px; 
+          height: 100px; 
+          flex-shrink: 0;
+        "
+      ></div>
+      <!--Enemy Health-->
+      <div style="background-color: yellow; height: 30px; width: 100%;"></div>
+      <div></div>
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
   <script src="/assets/SASS/script.js"></script>
 </body>
 </html>
