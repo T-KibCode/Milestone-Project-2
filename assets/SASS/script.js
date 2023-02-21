@@ -31,7 +31,7 @@ class Sprite {
         c.fillStyle = this.color
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
 
-        // This is where Attack box is drawn //
+        //* This is where Attack box is drawn *//
 
         if (this.isAttacking) {
             c.fillStyle = 'green',
