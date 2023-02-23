@@ -133,7 +133,7 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
 }
 
 function determineWinner ({player, enemy, timerId}) {
-   cancelTimeout(timerId)
+   clearTimeout(timerId)
     document.querySelector('#displayText').style.display = 'flex'
     if (player.health === enemy.health) {
         document.querySelector('#displayText').innerHTML = 'The Match Is A Draw'
