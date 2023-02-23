@@ -145,6 +145,7 @@ function determineWinner ({player, enemy}) {
 
 //* function that tracks *// 
 let timer = 60
+let timerId = 
 function decreaseTimer () {
     setTimeout(decreaseTimer, 1000)
     if (timer > 0 ) {
