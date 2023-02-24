@@ -51,8 +51,13 @@ const player = new Fighter({
             imageSrc: './assets/GenichiroAssets/Idle right.png',
             framesMax: 8
         },
-        run: {
+        run1: {
             imageSrc: './assets/GenichiroAssets/Run right.png',
+            framesMax: 8
+            image: new Image()
+        }
+        run2: {
+            imageSrc: './assets/GenichiroAssets/Run left.png',
             framesMax: 8
             image: new Image()
         }
@@ -111,12 +116,13 @@ function animate() {
     enemy.velocity.x = 0
 
     //* player movement per pixel direction dependent *//
-
+    player.image = player.sprites.idle.image
     if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -5
-        player.image = player.sprites.run.image
+        player.image = player.sprites.run2.image
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
+        player.image = player.sprites.run1.image
     }
 
     //* Enemy movement per pixel direction depedent *//
