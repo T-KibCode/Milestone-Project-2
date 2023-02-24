@@ -44,7 +44,17 @@ const player = new Fighter({
     scale: 2.5,
     offset: {
         x: 215, 
-        y: 150
+        y: 157
+    },
+    sprites: {
+        idle: {
+            imageSrc: './assets/GenichiroAssets/Idle right.png',
+            framesMax: 8
+        },
+        run: {
+            imageSrc: './assets/GenichiroAssets/Run right.png',
+            framesMax: 8
+        }
     }
 })
 
@@ -94,7 +104,7 @@ function animate() {
     background.update()
     shop.update()
     player.update()
-    enemy.update()
+    // enemy.update() //
 
     player.velocity.x = 0
     enemy.velocity.x = 0

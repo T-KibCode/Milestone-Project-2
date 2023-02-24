@@ -34,7 +34,7 @@ class Sprite {
     animateFrames() {
         this.framesElapsed ++
 
-        if(this.framesElapsed % this.framesHold === 0) {
+        if (this.framesElapsed % this.framesHold === 0) {
             if (this.framesCurrent < this.framesMax - 1) {
             this.framesCurrent++
             } else {
@@ -46,7 +46,7 @@ class Sprite {
 
     update() {
         this.draw()
-        this.animateFrames
+        this.animateFrames()
     }
 
 }
@@ -59,7 +59,8 @@ class Fighter extends Sprite{
         imageSrc, 
         scale = 1, 
         framesMax = 1,
-        offset = {x: 0, y: 0}
+        offset = { x: 0, y: 0},
+        sprites
     }) {
         super({
             position,
@@ -88,6 +89,7 @@ class Fighter extends Sprite{
         this.framesCurrent = 0
         this.framesElapsed = 0
         this.framesHold = 4
+        this.sprites = sprites
     }
 
 
