@@ -90,6 +90,13 @@ class Fighter extends Sprite{
         this.framesElapsed = 0
         this.framesHold = 4
         this.sprites = sprites
+
+        for (const sprite in sprites) {
+            //this is the object class im looping over//
+           sprites[sprite].image = new Image()
+           sprites[sprite].image.src = sprites[sprite].imageSrc
+        }
+        
     }
 
 
