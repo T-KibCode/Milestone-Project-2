@@ -8,12 +8,16 @@ class Sprite {
         this.image.src = imageSrc
         this.scale = scale 
         this.framesMax = framesMax
+        //* using below ref to keep background image static *// 
+        this.framesCurrent = 0
+        this.framesElapsed = 0
+        this.framesHold = 1 
     }
 
     draw() {
         c.drawImage(
             this.image,
-            0,
+            this.framesCurrent * (this.image.width / this.framesMax),
             0,
             this.image.width / this.framesMax,
             this.image.height,
@@ -25,8 +29,19 @@ class Sprite {
         )
     }
 
+     //* this.framesMax - 1 is to stop the flickering effect by subtracting the black frame in the rear background animation loop *//
+
     update() {
         this.draw()
+        this.framesElapsed ++
+
+        if(this.framesElapsed % this.framesHold === 0) {
+            if (this.framesCurrent < this.framesMax - 1) {
+            this.framesCurrent++
+            } else {
+            this.framesCurrent = 0
+            }
+        }
     }
 
 }
