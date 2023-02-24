@@ -11,7 +11,7 @@ class Sprite {
         //* using below ref to keep background image static *// 
         this.framesCurrent = 0
         this.framesElapsed = 0
-        this.framesHold = 1 
+        this.framesHold = 4
     }
 
     draw() {
