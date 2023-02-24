@@ -1,5 +1,5 @@
 class Sprite {
-    constructor({position, imageSrc, scale = 1 }) {
+    constructor({position, imageSrc, scale = 1, framesMax = 1 }) {
         this.position = position
         this.width = 50
         this.height = 150
@@ -7,10 +7,22 @@ class Sprite {
         this.image = new Image()
         this.image.src = imageSrc
         this.scale = scale 
+        this.framesMax = framesMax
     }
 
     draw() {
-        c.drawImage(this.image, this.position.x, this.position.y, this.image.width * this.scale, this.image.height * this.scale)
+        c.drawImage(
+            this.image,
+            0,
+            0,
+            this.image.width / this.framesMax,
+            this.image.height,
+            this.position.x, 
+            this.position.y, 
+            //* the image width, divided by the amount of frames I have created by chopping up the image into 6 frames *//
+            (this.image.width / this.framesMax) * this.scale, 
+            this.image.height * this.scale
+        )
     }
 
     update() {
