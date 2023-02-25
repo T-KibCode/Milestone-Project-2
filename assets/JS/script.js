@@ -136,10 +136,15 @@ function animate() {
     } else { 
         player.switchSprite('idle')
     }
-
+    //jumping
     if (player.velocity.y < 0) {
         player.switchSprite('jump')
+    } else if (player.velocity.y > 0) {
+        player.switchSprite('fall')
     }
+
+    //jumping 
+    
 
     //* Enemy movement per pixel direction depedent *//
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
