@@ -128,9 +128,9 @@ class Fighter extends Sprite{
             case 'idle':
             break;
             case 'run':
-            break
+            break;
             case 'jump':
-            break
+            break;
         }
     }
 }
