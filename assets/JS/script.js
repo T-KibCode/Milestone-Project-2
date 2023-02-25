@@ -53,12 +53,12 @@ const player = new Fighter({
         },
         run1: {
             imageSrc: './assets/GenichiroAssets/Run right.png',
-            framesMax: 8
+            framesMax: 8,
             image: new Image()
-        }
+        },
         run2: {
             imageSrc: './assets/GenichiroAssets/Run left.png',
-            framesMax: 8
+            framesMax: 8,
             image: new Image()
         }
     }
