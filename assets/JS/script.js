@@ -121,18 +121,18 @@ function animate() {
     enemy.velocity.x = 0
 
     //* player movement per pixel direction dependent *//
-    player.image = player.sprites.idle.image
+
+    player.switchSprite('idle')
     if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -5
-        player.image = player.sprites.run2.image
+        player.switchSprite('run1')
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
-        player.image = player.sprites.run1.image
+        player.switchSprite('run2')
     }
 
     if (player.velocity.y < 0) {
-        player.image = player.sprites.jump.image
-        player.framesMax = player.sprites.jump.framesMax
+        player.switchSprite('jump')
     }
 
     //* Enemy movement per pixel direction depedent *//
