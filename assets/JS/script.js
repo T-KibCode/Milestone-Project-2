@@ -65,6 +65,10 @@ const player = new Fighter({
             imageSrc: './assets/GenichiroAssets/Jump left.png',
             framesMax: 2,
             
+        }, 
+        fall: {
+            imageSrc: './assets/GenichiroAssets/Fall right.png',
+            framesMax2
         }
     }
 })
@@ -122,13 +126,15 @@ function animate() {
 
     //* player movement per pixel direction dependent *//
 
-    player.switchSprite('idle')
+   
     if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -5
         player.switchSprite('run1')
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
         player.switchSprite('run2')
+    } else { 
+        player.switchSprite('idle')
     }
 
     if (player.velocity.y < 0) {
