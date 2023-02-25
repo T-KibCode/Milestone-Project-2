@@ -122,4 +122,15 @@ class Fighter extends Sprite{
            this.isAttacking = false
         }, 100)
     }
+
+    switchSprite(sprite) {
+        switch (sprite) {
+            case 'idle':
+            break;
+            case 'run':
+            break
+            case 'jump':
+            break
+        }
+    }
 }

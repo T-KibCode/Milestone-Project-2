@@ -54,12 +54,17 @@ const player = new Fighter({
         run1: {
             imageSrc: './assets/GenichiroAssets/Run right.png',
             framesMax: 8,
-            image: new Image()
+            
         },
         run2: {
             imageSrc: './assets/GenichiroAssets/Run left.png',
             framesMax: 8,
-            image: new Image()
+            
+        },
+        jump: {
+            imageSrc: './assets/GenichiroAssets/Jump left.png',
+            framesMax: 2,
+            
         }
     }
 })
@@ -123,6 +128,11 @@ function animate() {
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
         player.image = player.sprites.run1.image
+    }
+
+    if (player.velocity.y < 0) {
+        player.image = player.sprites.jump.image
+        player.framesMax = player.sprites.jump.framesMax
     }
 
     //* Enemy movement per pixel direction depedent *//
