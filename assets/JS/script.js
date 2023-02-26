@@ -87,6 +87,36 @@ const enemy = new Fighter({
         x:-50,
         y:0
     },
+    imageSrc: './assets/IsshinAssets/Idle left.png',
+    framesMax: 4,
+    scale: 2.5,
+    offset: {
+        x: 215, 
+        y: 167
+    },
+    sprites: {
+        idle: {
+            imageSrc: './assets/IsshinAssets/Idle left.png',
+            framesMax: 4
+        },
+        run1: {
+            imageSrc: './assets/IsshinAssets/Run-left.png',
+            framesMax: 8,
+            
+        },
+        jump: {
+            imageSrc: './assets/IsshinAssets/Jump left.png',
+            framesMax: 2,
+        },
+        fall: {
+            imageSrc: './assets/IsshinAssets/Fall left.png',
+            framesMax: 2,
+        },
+        attack1: {
+            imageSrc: './assets/IsshinAssets/Attack1 left.png',
+            framesMax: 4,
+        }
+    }
 })
 
 enemy.draw()
@@ -117,7 +147,7 @@ function animate() {
     background.update()
     shop.update()
     player.update()
-    // enemy.update() //
+    enemy.update()
 
     player.velocity.x = 0
     enemy.velocity.x = 0
@@ -133,7 +163,7 @@ function animate() {
         player.switchSprite('idle')
     }
     
-    //* jumping *//
+    //* jumping player *//
     if (player.velocity.y < 0) {
         player.switchSprite('jump')
     } else if (player.velocity.y > 0) {
@@ -143,10 +173,20 @@ function animate() {
     //* Enemy movement per pixel direction depedent *//
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
         enemy.velocity.x = -5
+        enemy.switchSprite('run1')
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
         enemy.velocity.x = 5
+        enemy.switchSprite('run1')
+    } else {
+        enemy.switchSprite('idle')
     }
 
+    //* Enemy jumping *//
+    if (enemy.velocity.y < 0) {
+        enemy.switchSprite('jump')
+    } else if (enemy.velocity.y > 0) {
+        enemy.switchSprite('fall')
+    }
 
     //* detect collision *//
     if(
