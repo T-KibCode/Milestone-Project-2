@@ -67,7 +67,16 @@ const player = new Fighter({
         attack1: {
             imageSrc: './assets/GenichiroAssets/Attack1 right.png',
             framesMax: 6,
-        }
+        } 
+    }, 
+
+    attackBox: {
+        offset: {
+            x: 100,
+            y: 50
+        },
+        width: 150,
+        height: 50
     }
 })
 
@@ -116,6 +125,14 @@ const enemy = new Fighter({
             imageSrc: './assets/IsshinAssets/Attack1 left.png',
             framesMax: 4,
         }
+    },
+    attackBox: {
+        offset: {
+            x: 0,
+            y: 0
+        },
+        width: 100,
+        height: 50
     }
 })
 
@@ -257,7 +274,7 @@ window.addEventListener('keydown', (event) => {
             enemy.velocity.y = -15
             break
         case 'ArrowDown':
-            enemy.isAttacking = true
+            enemy.attack()
             break
 
     }
