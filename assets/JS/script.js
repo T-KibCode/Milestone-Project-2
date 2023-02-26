@@ -56,20 +56,11 @@ const player = new Fighter({
             framesMax: 8,
             
         },
-        run2: {
-            imageSrc: './assets/GenichiroAssets/Run left.png',
-            framesMax: 8,
-            
-        },
         jump: {
-            imageSrc: './assets/GenichiroAssets/Jump left.png',
+            imageSrc: './assets/GenichiroAssets/Jump right.png',
             framesMax: 2,
             
-        }, 
-        fall: {
-            imageSrc: './assets/GenichiroAssets/Fall right.png',
-            framesMax2
-        },
+        }
     }
 })
 
@@ -125,26 +116,18 @@ function animate() {
     enemy.velocity.x = 0
 
     //* player movement per pixel direction dependent *//
-
-   
+    player.switchSprite('idle');
     if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -5
         player.switchSprite('run1')
     } else if (keys.d.pressed && player.lastKey === 'd') {
         player.velocity.x = 5
-        player.switchSprite('run2')
-    } else { 
-        player.switchSprite('idle')
-    }
-    //jumping
-    if (player.velocity.y < 0) {
-        player.switchSprite('jump')
-    } else if (player.velocity.y > 0) {
-        player.switchSprite('fall')
+        player.switchSprite('run1')
     }
 
-    //jumping 
-    
+    if (player.velocity.y < 0) {
+        player.switchSprite('jump')
+    }
 
     //* Enemy movement per pixel direction depedent *//
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
