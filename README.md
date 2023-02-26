@@ -1,7 +1,14 @@
 # Milestone-Project-2
-Second milestone project with the code institute
-This Project is going to be to create a 2 player 2d fighting game similar to street fighter from the pre 2001 era and back, harkening back to these old school games.
 
+# Introduction
+This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
+
+This Project is going to be to create a 2 player 2d fighting game similar to street fighter from the pre 2001 era and back, harkening back to these old school games.
+It was my original intent to Allow the game to use an opaque overlay in order to be able to play the devce on mobile. 
+
+However during the design process, it became very quickly apprant that Allowing the website in a mobile or tablet function would be extremely difficult due to having to map a button overlay on top, and as I had originally designed the game to be playable by two human players without a CPU controlled enemy, I was unfortunately unable to integrate a method to do this over mobile/tablet devices. 
+
+Second milestone project with the code institute
 
 I'm building this website in such a way that If a user loads/lands on the site, it is immidately clear what his USP is , what the website provides for information/service's, and how to employ these services whilst keeping the user engaged at all points. 
 
