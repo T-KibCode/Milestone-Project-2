@@ -47,7 +47,7 @@ Due to having some free assets that I aqquired online from website [https://itch
 With this in mind, the background colour was going to be fairly static in theme with this and I ended up on a pastel pink background color With the game instructions placed above the canvas with the prompt of clicking into the canvas window to load the game. 
 
 I decided to use a free to use font for personal/educational use modeled after the original street fighter font released in 1991. 
-![font example]()
+![font example](https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2022/04/Street-Fighter-Logo-Font.jpg?resize=940%2C649)
 
 ##### Wireframes
   CTRL + Click to open in a new tab. 
