@@ -67,7 +67,11 @@ const player = new Fighter({
         attack1: {
             imageSrc: './assets/GenichiroAssets/Attack1 right.png',
             framesMax: 6,
-        } 
+        }, 
+        takeHit: {
+            imageSrc: './assets/GenichiroAssets/Take Hit right.png',
+            framesMax: 4,
+        },
     }, 
 
     attackBox: {
@@ -124,6 +128,10 @@ const enemy = new Fighter({
         attack1: {
             imageSrc: './assets/IsshinAssets/Attack1 left.png',
             framesMax: 4,
+        },
+        takeHit: {
+            imageSrc: './assets/IsshinAssets/Take hit left.png',
+            framesMax: 3,
         }
     },
     attackBox: {
@@ -205,22 +213,22 @@ function animate() {
         enemy.switchSprite('fall')
     }
 
-    //* detect collision *//
+    //* detect collision & enemy gets hit *//
     
     if (
         rectangularCollision({
         rectangle1: player,
         rectangle2: enemy,
-        }) &&
+    }) &&
         player.isAttacking && 
         player.framesCurrent === 4
     ) {
+        enemy.takeHit()
         player.isAttacking = false
-        enemy.health -= 20
         document.querySelector('#enemyHealth').style.width = enemy.health + '%'
     }
 
-    if(
+    if (
         rectangularCollision({
         rectangle1: enemy,
         rectangle2: player,
@@ -228,8 +236,8 @@ function animate() {
         enemy.isAttacking && 
         enemy.framesCurrent === 2
     ) {
+        player.takehit()
         enemy.isAttacking = false
-        player.health -= 20
         document.querySelector('#playerHealth').style.width = player.health + '%'
     }
 
