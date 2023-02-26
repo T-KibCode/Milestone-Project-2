@@ -114,6 +114,10 @@ I decided to use a free to use font for personal/educational use modeled after t
  - [GitHub](https://github.com/) GitHub is used to store the projects code.
  - [Gitpages](https://pages.github.com/) Gitpages are used to deploy the site.
  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
+ - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test html and css code.
+ - [Jshint](https://jshint.com/) used to validate Javascript code.
+
+</details>  
 
 
 
