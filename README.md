@@ -70,58 +70,50 @@ I decided to use a free to use font for personal/educational use modeled after t
   ### Instruction Page 
   On loading there is listed instructions above the canvas with the four button controls for both players to use ( A,W,D,Space-Bar. and ArrowLeft, ArrowUp, ArroRight, Arrow Down Respectively.)
     
-  ![picture of the instruction page](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/instructionpage-pp2.png)  
-    
     
   ### Timer
-  As the game is in progress the time taken is tracked and displayed above the play area.  When the player completes the final pair the time taken 
-  is displayed in the modal screen display area.  If the time is quicker than any other during that playing session or it is the first game in that session the Best Time display
-  is up-dated with the new best time.  This satisfies the user need to be able to gauge/score their performance.  
+  The timer in the game runs within a loop that checks to determine whether either players health has reduced in to zero therefore stopping the timer, or checks the health of both players at the end of the match to determine who posses mmore health and will then declare this person the victor. 
     
     
   ![a picture of the timer section](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/timer-pp2.png)  
     
     
-  ### Customisable Features
-  In order to increase player enjoyment and engagement with the site, I felt it was necessary to add an option to increase difficulty.
-  This is achieved by simply adding another 6 cards to be matched, from 12 to 18. This option is accessed from the slide-down screen as shown above.  
-  It is possible to stop the music and/or sound effects from playing by clicking on the speaker icons, also found on the instruction page.  These features address the user need
-  to be able to vary difficulty and customize gameplay. 
-  
     
-    
-  ![a picture of the hard difficulty level](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/hardlevel-pp2.png)  
-    
-    
-  ### Modal Screen
-  When the player completes all the matches a modal screen is displayed with a congratulatory message and details of the time taken and the difficulty level.  
+  ### Victory message
+  When a player fufills one of the win conditions of the game a victory message will appear declaring that player the victor whetehr that be at the end of the timer or a unanimous victory before the timer has run down. 
+
+  In the event that the players Health bar matches, it will be declared a draw once the timer has .run down to zero.
+
+
     
     
   ![a picture of the victory screen](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/modal-pp2.png)
-  
-  
-  ### Animated Start Button
-  The start button is animated whilst the game is not in play, in order to direct the user's attention to it.  
-    
-  ![a picture of the start button](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/startbutton-pp2.png)
-    
-    
+       
   
   ### Possible Future Features
-  I'd would like to add extra features to the game such as;
-  - Progressively harder levels as the player finishes each stage, this will be achieved by adding extra cards and shortening the time the un-matched cards are left turned.
-  - Different colours and icons on the face side of the cards as player progresses through the game.
-  - Set up a high-scores table on localStorage so players could see their ranking.
-  
+  It was my original intent to Allow the game to use an opaque overlay in order to be able to play the devce on mobile devices. 
+
+  However during the design process, it became very quickly apprant that allowing the website in a mobile or tablet function would be extremely difficult due to having to map a button overlay on top, and as I had originally designed the game to be playable by two human players without a CPU controlled enemy, I was unfortunately unable to integrate a method to do this over mobile/tablet devices due to not having designed a CPU based opponent in the code. 
+
+  Due to a lack of time, this was not a function that I was able to integrate at this moment in time, however I do plan to revisit this once the course has been completed to be able to design a very basic CPU opponent within the game function and allow players to be able to have a choice between a second player or a CPU opponent. 
   
   </details>    
 
+# Technologies Used
+<details>
+  <summary>Technologies Used</summary>
+  
+  #### Languages Used
+  
+  - HTML5
+  - CSS
+  - Javascript
 
+#### Applications Used
 
-It was my original intent to Allow the game to use an opaque overlay in order to be able to play the devce on mobile devices. 
+ - [GitHub](https://github.com/) GitHub is used to store the projects code.
+ - [Gitpages](https://pages.github.com/) Gitpages are used to deploy the site.
+ - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
 
-However during the design process, it became very quickly apprant that allowing the website in a mobile or tablet function would be extremely difficult due to having to map a button overlay on top, and as I had originally designed the game to be playable by two human players without a CPU controlled enemy, I was unfortunately unable to integrate a method to do this over mobile/tablet devices due to not having designed a CPU based opponent in the code. 
-
-Due to a lack of time, this was not a function that I was able to integrate at this moment in time, however I do plan to revisit this once the course has been completed to be able to design a very basic CPU opponent within the game function and allow players to be able to have a choice between a second player or a CPU opponent. 
 
 
