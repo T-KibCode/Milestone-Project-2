@@ -52,8 +52,69 @@ I decided to use a free to use font for personal/educational use modeled after t
 
 </details> 
 
+<details>
 # Features
 
+ 
+  <summary>Features</summary>
+  
+  ### Responsive  Website
+  The website is only set to appear and work on a laptop, or desktop device. And as such, due to the design of the game and my limited knowledge whist creating the game, a conscience decision was made to design the game to only load on devices of this kind. This is due to the game being a two player game required to end User's to play the game against eachother. 
+
+  When an Attempt is made to try and access the game from a Mobile or Tablet device , the website will look at the view port and ask that the player access the website from the desired device as the game may not work as intended and for the best experience, it is to be acceesed in the intended manner. 
+    
+    
+  ![screenshot of iphone](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/iphonelandscape-pp2.png)  
+    
+    
+  ### Instruction Page 
+  On loading there is listed instructions above the canvas with the four button controls for both players to use ( A,W,D,Space-Bar. and ArrowLeft, ArrowUp, ArroRight, Arrow Down Respectively.)
+    
+  ![picture of the instruction page](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/instructionpage-pp2.png)  
+    
+    
+  ### Timer
+  As the game is in progress the time taken is tracked and displayed above the play area.  When the player completes the final pair the time taken 
+  is displayed in the modal screen display area.  If the time is quicker than any other during that playing session or it is the first game in that session the Best Time display
+  is up-dated with the new best time.  This satisfies the user need to be able to gauge/score their performance.  
+    
+    
+  ![a picture of the timer section](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/timer-pp2.png)  
+    
+    
+  ### Customisable Features
+  In order to increase player enjoyment and engagement with the site, I felt it was necessary to add an option to increase difficulty.
+  This is achieved by simply adding another 6 cards to be matched, from 12 to 18. This option is accessed from the slide-down screen as shown above.  
+  It is possible to stop the music and/or sound effects from playing by clicking on the speaker icons, also found on the instruction page.  These features address the user need
+  to be able to vary difficulty and customize gameplay. 
+  
+    
+    
+  ![a picture of the hard difficulty level](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/hardlevel-pp2.png)  
+    
+    
+  ### Modal Screen
+  When the player completes all the matches a modal screen is displayed with a congratulatory message and details of the time taken and the difficulty level.  
+    
+    
+  ![a picture of the victory screen](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/modal-pp2.png)
+  
+  
+  ### Animated Start Button
+  The start button is animated whilst the game is not in play, in order to direct the user's attention to it.  
+    
+  ![a picture of the start button](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/startbutton-pp2.png)
+    
+    
+  
+  ### Possible Future Features
+  I'd would like to add extra features to the game such as;
+  - Progressively harder levels as the player finishes each stage, this will be achieved by adding extra cards and shortening the time the un-matched cards are left turned.
+  - Different colours and icons on the face side of the cards as player progresses through the game.
+  - Set up a high-scores table on localStorage so players could see their ranking.
+  
+  
+  </details>    
 
 
 
