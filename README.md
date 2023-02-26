@@ -119,5 +119,13 @@ I decided to use a free to use font for personal/educational use modeled after t
 
 </details>  
 
+# Deployment
+  <details>
+    
+  <summary>Deployment</summary>
+  
+  This project was built on the Gitpod IDE using the Code Institute template found here:<br>https://github.com/Code-Institute-Org/gitpod-full-template
 
+ #### Automated Testing
+  I did not have the expertise to use a unit-testing framework such as Jasmine or Jest.   
 
