@@ -171,10 +171,10 @@ function animate() {
 
     //* player movement per pixel direction dependent *//
     if (keys.a.pressed && player.lastKey === 'a') {
-        player.velocity.x = -5
+        player.velocity.x = -8
         player.switchSprite('run1')
     } else if (keys.d.pressed && player.lastKey === 'd') {
-        player.velocity.x = 5
+        player.velocity.x = 8
         player.switchSprite('run1')
     } else {
         player.switchSprite('idle')
@@ -189,10 +189,10 @@ function animate() {
 
     //* Enemy movement per pixel direction depedent *//
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
-        enemy.velocity.x = -5
+        enemy.velocity.x = -8
         enemy.switchSprite('run1')
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
-        enemy.velocity.x = 5
+        enemy.velocity.x = 8
         enemy.switchSprite('run1')
     } else {
         enemy.switchSprite('idle')
@@ -216,7 +216,7 @@ function animate() {
         player.framesCurrent === 4
     ) {
         player.isAttacking = false
-        enemy.health -= 20
+        enemy.health -= 10
         document.querySelector('#enemyHealth').style.width = enemy.health + '%'
     }
 
@@ -229,7 +229,7 @@ function animate() {
         enemy.framesCurrent === 2
     ) {
         enemy.isAttacking = false
-        player.health -= 20
+        player.health -= 10
         document.querySelector('#playerHealth').style.width = player.health + '%'
     }
 
