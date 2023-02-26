@@ -59,7 +59,10 @@ const player = new Fighter({
         jump: {
             imageSrc: './assets/GenichiroAssets/Jump right.png',
             framesMax: 2,
-            
+        },
+        fall: {
+            imageSrc: './assets/GenichiroAssets/Fall right.png',
+            framesMax: 2,
         }
     }
 })
@@ -125,9 +128,12 @@ function animate() {
     } else {
         player.switchSprite('idle')
     }
-
+    
+    //* jumping *//
     if (player.velocity.y < 0) {
         player.switchSprite('jump')
+    } else if (player.velocity.y > 0) {
+        player.switchSprite('fall')
     }
 
     //* Enemy movement per pixel direction depedent *//
@@ -138,7 +144,7 @@ function animate() {
     }
 
 
-    // detect collision //
+    //* detect collision *//
     if(
         rectangularCollision({
         rectangle1: player,
