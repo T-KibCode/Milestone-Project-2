@@ -206,12 +206,14 @@ function animate() {
     }
 
     //* detect collision *//
-    if(
+    
+    if (
         rectangularCollision({
         rectangle1: player,
         rectangle2: enemy,
-    }) &&
-        player.isAttacking
+        }) &&
+        player.isAttacking && 
+        player.framesCurrent === 4
     ) {
         player.isAttacking = false
         enemy.health -= 20
@@ -228,6 +230,11 @@ function animate() {
         enemy.isAttacking = false
         player.health -= 20
         document.querySelector('#playerHealth').style.width = player.health + '%'
+    }
+
+    //if player misses
+    if (player.isAttacking && player.framesCurrent === 4) {
+        player.isAttacking = false
     }
 
     //end game based on health //
