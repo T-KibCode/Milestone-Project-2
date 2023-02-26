@@ -110,7 +110,13 @@ class Fighter extends Sprite{
         this.attackBox.position.x = this.position.x + this.attackBox.offset.x
         this.attackBox.position.y = this.position.y + this.attackBox.offset.y
 
-        c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height)
+        //This is where I had drawn an attackBox over the sprite images to show the hitboxes. Commented out the draw boxes.
+        //c.fillRect(
+            //this.attackBox.position.x, 
+            //this.attackBox.position.y, 
+           // this.attackBox.width, 
+            //this.attackBox.height
+           // )
         
         this.position.x += this.velocity.x
         this.position.y += this.velocity.y 
