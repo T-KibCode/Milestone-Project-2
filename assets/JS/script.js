@@ -63,6 +63,10 @@ const player = new Fighter({
         fall: {
             imageSrc: './assets/GenichiroAssets/Fall right.png',
             framesMax: 2,
+        },
+        attack1: {
+            imageSrc: './assets/GenichiroAssets/Attack1 right.png',
+            framesMax: 6,
         }
     }
 })
