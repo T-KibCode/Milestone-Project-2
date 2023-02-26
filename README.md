@@ -30,9 +30,7 @@ This is because within the parameters of this particular gaming medium, we find 
   
   ##### Return/frequent Visitor Goals.
   As a return/frequent visitor I want:  
-  - to be able to gauge/score my performance.
-  - to be able to challenge myself by increasing difficulty of the game.
-  - to be able to play the game on various different comaptiable devices.
+  - to play with friends in a couch co-op setup similar to the older arcade games in order to have that rapport with the opponent within the room. 
   
   ##### Website's Owner Goals.
   As the developer I want:
