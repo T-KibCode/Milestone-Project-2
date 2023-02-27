@@ -2,6 +2,10 @@ Run Python script python3 -m http.server in order to see a preview of the projec
 
 # Milestone-Project-2
 
+Github Repo Link []()
+
+Page Deployment []{}
+
 # Introduction
 This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
 
@@ -43,9 +47,6 @@ This is because within the parameters of this particular gaming medium, we find 
 Due to having some free assets that I aqquired online from website [https://itch.io/](https://itch.io/),  I had a clear colour pallette style within the canvas window that I wanted to be the main focus with a combination of Blue, Pinks, soft Reds and other colors in the Pastel style.
 
 With this in mind, the background colour was going to be fairly static in theme with this and I ended up on a pastel pink background color With the game instructions placed above the canvas with the prompt of clicking into the canvas window to load the game. 
-
-I decided to use a free to use font for personal/educational use modeled after the original street fighter font released in 1991. 
-![font example](https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2022/04/Street-Fighter-Logo-Font.jpg?resize=940%2C649)
 
 ##### Wireframes
   CTRL + Click to open in a new tab. 
