@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth < 1000) {
+      alert(" THIS GAME IS NOT SUPPORTED ON MOBILE/TABLET DEVICES. PLEASE ACCESS THE SITE THROUGH A DESKTOP COMPUTER WITH KEYBOARD. ");
+    }
+  });
+  
 //* rectangular collision *// 
 
 function rectangularCollision({ rectangle1, rectangle2 }) {
@@ -38,3 +44,11 @@ function decreaseTimer () {
         determineWinner({player, enemy, timerId});
     }
 }
+window.addEventListener('resize', function(event) {
+    if (window.innerWidth < 938) {
+      document.getElementById('element-to-hide').style.display = 'none';
+    } else {
+      document.getElementById('element-to-hide').style.display = 'block';
+    }
+  });
+  
