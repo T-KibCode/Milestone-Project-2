@@ -2,9 +2,7 @@ Run Python script python3 -m http.server in order to see a preview of the projec
 
 # Milestone-Project-2
 
-Github Repo Link []()
-
-Page Deployment []{}
+Github Repo Link [Milestone Project 2](https://github.com/T-KibCode/Milestone-Project-2)
 
 # Introduction
 This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
@@ -49,7 +47,11 @@ Due to having some free assets that I aqquired online from website [https://itch
 With this in mind, the background colour was going to be fairly static in theme with this and I ended up on a pastel pink background color With the game instructions placed above the canvas with the prompt of clicking into the canvas window to load the game. 
 
 ##### Wireframes
-  CTRL + Click to open in a new tab. 
+  Unfortuntely in this case, I cannot produce a wireframe due to a last minute pivot on my project in this case. 
+  I've had to take this as a hard lesson in why having a strict intial plan will pay off in the length of the project as this will undoubtedly lose me marks.
+  However in the self reflection of the project, I believe it is nessercary to show the growth and personal accountability that I need when moving forward in this field, even more so with the projects and work ahead. 
+
+
 
 </details> 
 
@@ -65,9 +67,6 @@ With this in mind, the background colour was going to be fairly static in theme 
   When an Attempt is made to try and access the game from a Mobile or Tablet device , the website will look at the view port and ask that the player access the website from the desired device as the game may not work as intended and for the best experience, it is to be acceesed in the intended manner. 
     
     
-  [screen shot of phone view] 
-    
-    
   ### Instruction Page 
   On loading there is listed instructions above the canvas with the four button controls for both players to use ( A,W,D,Space-Bar. and ArrowLeft, ArrowUp, ArroRight, Arrow Down Respectively.)
     
@@ -75,21 +74,13 @@ With this in mind, the background colour was going to be fairly static in theme 
   ### Timer
   The timer in the game runs within a loop that checks to determine whether either players health has reduced in to zero therefore stopping the timer, or checks the health of both players at the end of the match to determine who posses mmore health and will then declare this person the victor. 
     
-    
-  ![a picture of the timer section] 
-    
-    
+   
     
   ### Victory message
   When a player fufills one of the win conditions of the game a victory message will appear declaring that player the victor whetehr that be at the end of the timer or a unanimous victory before the timer has run down. 
 
   In the event that the players Health bar matches, it will be declared a draw once the timer has run down to zero.
 
-
-    
-    
-  ![a picture of the victory screen] 
-       
   
   ### Possible Future Features
   It was my original intent to Allow the game to use an opaque overlay in order to be able to play the devce on mobile devices. 
@@ -113,7 +104,6 @@ With this in mind, the background colour was going to be fairly static in theme 
 #### Applications Used
 
  - [GitHub](https://github.com/) GitHub is used to store the projects code.
- - [Gitpages](https://pages.github.com/) Gitpages are used to deploy the site.
  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
  - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test html and css code.
  - [Jshint](https://jshint.com/) used to validate Javascript code.
@@ -127,6 +117,24 @@ With this in mind, the background colour was going to be fairly static in theme 
   
   This project was built on the Gitpod IDE using the Code Institute template found here:<br>https://github.com/Code-Institute-Org/gitpod-full-template
 
+  I have attempted to deploy this project to github pages, but unfortuntely, it has not been recognised with the Jeykll system built into Github pages and therefore will not deploy. 
+
+  However if the folling script is run "Run Python script python3 -m http.server" in order to see a preview of the project, you will be able to access the game in its current form.
+
  #### Automated Testing
   I did not have the expertise to use a unit-testing framework such as Jasmine or Jest.   
+
+#### Main takeaways
+
+In performing this project I have realised that a strong system in the intial concept phase is needed to bring all idea's to fruition in a reasonable time frame and capacity. 
+with that being said, I am now looking ahead to the next project in order to plan and deliver my wireframes for the project this week so I can start to implement the knowledge of studying python for backend use as soon as possible prior to the April 28th project deadline. 
+
+This has been a harsh lesson for me to learn in this course, but balancing both the expected delivery of this project and the increasing workload/knowledge base nessercary to be a fullstack developer has really hit home during this process, and irrespective of personal commitments, I hope to look back on this project as a catiounary tale to my futureself about planning, due dilligence, and ensuring that following systematic steps in the future, will allow me to show the nesscary skills that are needed/expected in this industry. 
+
+
+#### Specal Thanks
+
+I would like to thank my Tutor Mohamed for allowing an extension on my work due to a technical issue with Github in my repository, and allowing me the time to go back and recreate my work which I had lost in this instance whilst balancing some personal affairs in the process.
+
+I would also like to thank my Mentor/Alumni from Code Institute Ronan as he made it clear to me, just how integral a great Readme file can be to code enviroment for anyone who comes afterwards to take a look to examine the work and how when working in a group setting, this key piece of documentation can be the strong foundation for a team in a wider enviroment. 
 
