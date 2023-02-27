@@ -64,7 +64,7 @@ I decided to use a free to use font for personal/educational use modeled after t
   When an Attempt is made to try and access the game from a Mobile or Tablet device , the website will look at the view port and ask that the player access the website from the desired device as the game may not work as intended and for the best experience, it is to be acceesed in the intended manner. 
     
     
-  ![screenshot of iphone](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/iphonelandscape-pp2.png)  
+  [screen shot of phone view] 
     
     
   ### Instruction Page 
@@ -75,19 +75,19 @@ I decided to use a free to use font for personal/educational use modeled after t
   The timer in the game runs within a loop that checks to determine whether either players health has reduced in to zero therefore stopping the timer, or checks the health of both players at the end of the match to determine who posses mmore health and will then declare this person the victor. 
     
     
-  ![a picture of the timer section](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/timer-pp2.png)  
+  ![a picture of the timer section] 
     
     
     
   ### Victory message
   When a player fufills one of the win conditions of the game a victory message will appear declaring that player the victor whetehr that be at the end of the timer or a unanimous victory before the timer has run down. 
 
-  In the event that the players Health bar matches, it will be declared a draw once the timer has .run down to zero.
+  In the event that the players Health bar matches, it will be declared a draw once the timer has run down to zero.
 
 
     
     
-  ![a picture of the victory screen](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/modal-pp2.png)
+  ![a picture of the victory screen] 
        
   
   ### Possible Future Features
