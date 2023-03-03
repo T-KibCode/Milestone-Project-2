@@ -107,6 +107,10 @@ With this in mind, the background colour was going to be fairly static in theme 
  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
  - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test html and css code.
  - [Jshint](https://jshint.com/) used to validate Javascript code.
+ 
+#### Sprite Assets 
+
+ - [Itch.io](https://itch.io/) Itch.IO used for getting free to use free lisence sprite assets created by users. 
 
 </details>  
 
