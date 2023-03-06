@@ -56,7 +56,7 @@ With this in mind, the background colour was going to be fairly static in theme 
 </details> 
 
 <details>
-# Features
+##### Features
 
  
   <summary>Features</summary>
@@ -88,6 +88,10 @@ With this in mind, the background colour was going to be fairly static in theme 
   However during the design process, it became very quickly apprant that allowing the website in a mobile or tablet function would be extremely difficult due to having to map a button overlay on top, and as I had originally designed the game to be playable by two human players without a CPU controlled enemy, I was unfortunately unable to integrate a method to do this over mobile/tablet devices due to not having designed a CPU based opponent in the code. 
 
   Due to a lack of time, this was not a function that I was able to integrate at this moment in time, however I do plan to revisit this once the course has been completed to be able to design a very basic CPU opponent within the game function and allow players to be able to have a choice between a second player or a CPU opponent. 
+
+  Ideally, being able to reproduce this game within an app format with an Overlay of controls would allow for us to expand and allow for network play, whether that be remote or using the internet respectively. This would provide the option to expand the project in order to play with multiple friends using multiple devices.
+
+  However, this would require creating a backend system, and having server space in order to accomedate the use of the game, whilst also having space to introduce new features, such as user accounts, top scores and options to save certain user settings such as toggling HUD UI options as an exmaple. 
   
   </details>    
 
