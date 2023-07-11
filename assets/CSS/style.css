@@ -2,3 +2,17 @@
   box-sizing: border-box;
 }
 
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-controls {
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
