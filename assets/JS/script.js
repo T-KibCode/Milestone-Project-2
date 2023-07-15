@@ -5,10 +5,10 @@ canvas.width = 1024;
 canvas.height = 576;
 
 c.fillRect(0, 0, canvas.width, canvas.height);
- 
+
 const gravity = 0.7;
 
-const background = new Sprite ({
+const background = new Sprite({
     position: {
         x: 0,
         y: 0
@@ -16,7 +16,7 @@ const background = new Sprite ({
     imageSrc: './assets/background.png'
 });
 
-const shop = new Sprite ({
+const shop = new Sprite({
     position: {
         x: 600,
         y: 128
@@ -32,18 +32,18 @@ const player = new Fighter({
         y: 0,
     },
     velocity: {
-        x:0,
-        y:0
+        x: 0,
+        y: 0
     },
     offset: {
-        x:0,
-        y:0
+        x: 0,
+        y: 0
     },
     imageSrc: './assets/GenichiroAssets/Idle right.png',
     framesMax: 8,
     scale: 2.5,
     offset: {
-        x: 215, 
+        x: 215,
         y: 157
     },
     sprites: {
@@ -54,7 +54,7 @@ const player = new Fighter({
         run1: {
             imageSrc: './assets/GenichiroAssets/Run right.png',
             framesMax: 8,
-            
+
         },
         jump: {
             imageSrc: './assets/GenichiroAssets/Jump right.png',
@@ -67,8 +67,8 @@ const player = new Fighter({
         attack1: {
             imageSrc: './assets/GenichiroAssets/Attack1 right.png',
             framesMax: 6,
-        } 
-    }, 
+        }
+    },
 
     attackBox: {
         offset: {
@@ -88,19 +88,19 @@ const enemy = new Fighter({
         y: 100,
     },
     velocity: {
-        x:0,
-        y:0
+        x: 0,
+        y: 0
     },
     color: 'blue',
     offset: {
-        x:-50,
-        y:0
+        x: -50,
+        y: 0
     },
     imageSrc: './assets/IsshinAssets/Idle left.png',
     framesMax: 4,
     scale: 2.5,
     offset: {
-        x: 215, 
+        x: 215,
         y: 167
     },
     sprites: {
@@ -111,7 +111,7 @@ const enemy = new Fighter({
         run1: {
             imageSrc: './assets/IsshinAssets/Run-left.png',
             framesMax: 8,
-            
+
         },
         jump: {
             imageSrc: './assets/IsshinAssets/Jump left.png',
@@ -143,7 +143,7 @@ console.log(player);
 const keys = {
     a: {
         pressed: false
-    }, 
+    },
     d: {
         pressed: false
     },
@@ -179,7 +179,7 @@ function animate() {
     } else {
         player.switchSprite('idle');
     }
-    
+
     //* jumping player *//
     if (player.velocity.y < 0) {
         player.switchSprite('jump');
@@ -206,13 +206,13 @@ function animate() {
     }
 
     //* detect collision *//
-    
+
     if (
         rectangularCollision({
-        rectangle1: player,
-        rectangle2: enemy,
+            rectangle1: player,
+            rectangle2: enemy,
         }) &&
-        player.isAttacking && 
+        player.isAttacking &&
         player.framesCurrent === 4
     ) {
         player.isAttacking = false;
@@ -220,12 +220,12 @@ function animate() {
         document.querySelector('#enemyHealth').style.width = enemy.health + '%';
     }
 
-    if(
+    if (
         rectangularCollision({
-        rectangle1: enemy,
-        rectangle2: player,
-    }) &&
-        enemy.isAttacking && 
+            rectangle1: enemy,
+            rectangle2: player,
+        }) &&
+        enemy.isAttacking &&
         enemy.framesCurrent === 2
     ) {
         enemy.isAttacking = false;
@@ -234,13 +234,13 @@ function animate() {
     }
 
     //if enemy misses
-    if (enemy.isAttacking && enemy.framesCurrent === 2 ) {
+    if (enemy.isAttacking && enemy.framesCurrent === 2) {
         enemy.isAttacking = false;
     }
 
     //end game based on health //
-    if(enemy.health <= 0 || player.health <= 0 ) {
-        determineWinner({player, enemy, timerId});
+    if (enemy.health <= 0 || player.health <= 0) {
+        determineWinner({ player, enemy, timerId });
     }
 }
 
@@ -252,14 +252,14 @@ animate();
 
 //* Player character control *//
 window.addEventListener('keydown', (event) => {
-    switch(event.key) {
+    switch (event.key) {
         case 'd':
             keys.d.pressed = true;
             player.lastKey = 'd';
             break;
         case 'a':
             keys.a.pressed = true;
-            player.lastKey = 'a' ;
+            player.lastKey = 'a';
             break;
         case 'w':
             player.velocity.y = -15;
@@ -276,8 +276,8 @@ window.addEventListener('keydown', (event) => {
             break;
         case 'ArrowLeft':
             keys.ArrowLeft.pressed = true;
-            enemy.lastKey = 'ArrowLeft' ;
-            break ;
+            enemy.lastKey = 'ArrowLeft';
+            break;
         case 'ArrowUp':
             enemy.velocity.y = -15;
             break;
@@ -286,11 +286,11 @@ window.addEventListener('keydown', (event) => {
             break;
 
     }
-    
+
 });
 
 window.addEventListener('keyup', (event) => {
-    switch(event.key) {
+    switch (event.key) {
         // player key off events
         case 'd':
             keys.d.pressed = false;
@@ -318,9 +318,9 @@ window.addEventListener('keyup', (event) => {
         case 'ArrowDown':
             enemy.isAttacking = true;
             break;
-    
 
-        
+
+
     }
-    
+
 });

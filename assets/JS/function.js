@@ -1,54 +1,53 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth < 1000) {
-      alert(" THIS GAME IS NOT SUPPORTED ON MOBILE/TABLET DEVICES. PLEASE ACCESS THE SITE THROUGH A DESKTOP COMPUTER WITH KEYBOARD. ");
+        alert(" THIS GAME IS NOT SUPPORTED ON MOBILE/TABLET DEVICES. PLEASE ACCESS THE SITE THROUGH A DESKTOP COMPUTER WITH KEYBOARD. ");
     }
-  });
-  
+});
+
 //* rectangular collision *// 
 
 function rectangularCollision({ rectangle1, rectangle2 }) {
     return (
-        rectangle1.attackBox.position.x + rectangle1.attackBox.width >= 
-            rectangle2.position.x && 
-        rectangle1.attackBox.position.x <= 
-            rectangle2.position.x + rectangle2.width && 
-        rectangle1.attackBox.position.y + rectangle1.attackBox.height >= 
-            rectangle2.position.y && 
+        rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
+        rectangle2.position.x &&
+        rectangle1.attackBox.position.x <=
+        rectangle2.position.x + rectangle2.width &&
+        rectangle1.attackBox.position.y + rectangle1.attackBox.height >=
+        rectangle2.position.y &&
         rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
     );
 }
 
-function determineWinner ({player, enemy, timerId}) {
-   clearTimeout(timerId);
+function determineWinner({ player, enemy, timerId }) {
+    clearTimeout(timerId);
     document.querySelector('#displayText').style.display = 'flex';
     if (player.health === enemy.health) {
         document.querySelector('#displayText').innerHTML = 'The Match Is A Draw';
-        } else if (player.health > enemy.health) {
+    } else if (player.health > enemy.health) {
         document.querySelector('#displayText').innerHTML = 'Player 1 Wins';
-        } else if (player.health < enemy.health) 
-            document.querySelector('#displayText').innerHTML = 'Player 2 Wins';
-        
+    } else if (player.health < enemy.health)
+        document.querySelector('#displayText').innerHTML = 'Player 2 Wins';
+
 }
 
 //* function that tracks *// 
 let timer = 60;
-let timerId ;
-function decreaseTimer () {
-    if (timer > 0 ) {
+let timerId;
+function decreaseTimer() {
+    if (timer > 0) {
         timerId = setTimeout(decreaseTimer, 1000);
         timer--;
         document.querySelector('#timer').innerHTML = timer;
-    }   
+    }
 
-    if (timer === 0 ) {
-        determineWinner({player, enemy, timerId});
+    if (timer === 0) {
+        determineWinner({ player, enemy, timerId });
     }
 }
-window.addEventListener('resize', function(event) {
+window.addEventListener('resize', function (event) {
     if (window.innerWidth < 938) {
-      document.getElementById('element-to-hide').style.display = 'none';
+        document.getElementById('element-to-hide').style.display = 'none';
     } else {
-      document.getElementById('element-to-hide').style.display = 'block';
+        document.getElementById('element-to-hide').style.display = 'block';
     }
-  });
-  
+});

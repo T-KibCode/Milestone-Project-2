@@ -41,8 +41,10 @@ This is because within the parameters of this particular gaming medium, we find 
   - to encourage continued use of the game.
 
 
-##### Colour Scheme 
+#### Colour Scheme 
 Due to having some free assets that I aqquired online from website [https://itch.io/](https://itch.io/),  I had a clear colour pallette style within the canvas window that I wanted to be the main focus with a combination of Blue, Pinks, soft Reds and other colors in the Pastel style.
+
+[/assets/colorpallete.png]
 
 With this in mind, the background colour was going to be fairly static in theme with this and I ended up on a pastel pink background color With the game instructions placed above the canvas with the prompt of clicking into the canvas window to load the game. 
 
