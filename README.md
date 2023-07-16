@@ -4,6 +4,10 @@ Run Python script python3 -m http.server in order to see a preview of the projec
 
 Github Repo Link [Milestone Project 2](https://github.com/T-KibCode/Milestone-Project-2)
 
+Deployed Website: [Deadly Combat] (https://t-kibcode.github.io/Milestone-Project-2/)
+
+
+
 # Introduction
 
 This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
