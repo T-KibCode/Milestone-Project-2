@@ -47,7 +47,7 @@ function handlePlayerName(player, inputId) {
 
 function resetCanvas() {
 
-    const confirmed = confirm("Are you sure you want to reset the canvas?");
+    const confirmed = confirm("Are you sure you want to reset the match?");
 
     if (confirmed) {
 
@@ -68,7 +68,7 @@ function enterName() {
 
 
     const nameContainer = document.getElementById('nameContainer');
-    const nameElement = document.createElement('h2');
+    const nameElement = document.createElement('h3');
     nameElement.textContent = name;
     nameContainer.insertBefore(nameElement, nameContainer.firstChild);
 
@@ -84,3 +84,13 @@ function activateCanvas() {
 
 
 document.getElementById('canvas').addEventListener('click', enterName);
+
+
+
+// Description: This function will change the html in the main index file that currently RESIDES WITHIN THE H3 TAGS. This will change the username to match the input by the user provided matching the ID of player1input and player2input.
+
+function changeName() {
+    document.getElementById('player1Name').innerHTML = document.getElementById('player1input').value;
+    document.getElementById('player2Name').innerHTML = document.getElementById('player2input').value;
+}
+
