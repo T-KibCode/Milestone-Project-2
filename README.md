@@ -6,7 +6,7 @@ Github Repo Link [Milestone Project 2](https://github.com/T-KibCode/Milestone-Pr
 
 Deployed Website: [Deadly Combat](https://t-kibcode.github.io/Milestone-Project-2/)
 
-
+![Screen shot of responsive website](https://github.com/T-KibCode/Milestone-Project-2/blob/main/assets/Screenshot%202023-07-16%20at%2019.15.21.png)
 
 # Introduction
 
