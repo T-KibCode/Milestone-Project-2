@@ -1,3 +1,4 @@
+// function to draw a rectangle for the canvas element *//
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
@@ -8,6 +9,7 @@ c.fillRect(0, 0, canvas.width, canvas.height);
 
 const gravity = 0.7;
 
+// variables to draw the sprites for the canvas element backgrounds and shop element *//
 const background = new Sprite({
     position: {
         x: 0,
@@ -26,6 +28,7 @@ const shop = new Sprite({
     framesMax: 6
 });
 
+// variable to animate sprites *//
 const player = new Fighter({
     position: {
         x: 0,

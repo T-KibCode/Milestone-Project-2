@@ -14,7 +14,7 @@ class Sprite {
         this.framesHold = 4;
         this.offset = offset;
     }
-
+    
     draw() {
         c.drawImage(
             this.image,
@@ -43,14 +43,15 @@ class Sprite {
         }
     }
 
-
+    // this is the update function that will be called in the game loop //
     update() {
         this.draw();
         this.animateFrames();
     }
+    
 
 }
-
+// this is the class for the sprite hitboxes //
 class Fighter extends Sprite {
     constructor({
         position,
@@ -101,7 +102,6 @@ class Fighter extends Sprite {
     }
 
 
-
     update() {
         this.draw();
         this.animateFrames();
@@ -128,18 +128,20 @@ class Fighter extends Sprite {
         } else this.velocity.y += gravity;
     }
 
+    // this function draws the sprite image attack function //
     attack() {
         this.switchSprite('attack1');
         this.isAttacking = true;
     }
 
+    // this function draws the sprite image idle function //
     switchSprite(sprite) {
         if (
             this.image === this.sprites.attack1.image &&
             this.framesCurrent < this.sprites.attack1.framesMax - 1
         )
             return;
-
+        // this is the switch statement that will switch the sprite image based on the key pressed //
         switch (sprite) {
             case 'idle':
                 if (this.image !== this.sprites.idle.image) {

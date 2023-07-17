@@ -1,10 +1,11 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth < 1000) {
         alert(" THIS GAME IS NOT SUPPORTED ON MOBILE/TABLET DEVICES. PLEASE ACCESS THE SITE THROUGH A DESKTOP COMPUTER WITH KEYBOARD. ");
     }
 });
 
-//* rectangular collision *// 
+//* rectangular collision relating to the hitboxes of the sprites attack animations in relation to the opposing sprite *// 
 
 function rectangularCollision({ rectangle1, rectangle2 }) {
     return (
@@ -18,6 +19,7 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
     );
 }
 
+//* function that determines the winner of the game when condition is met *//
 function determineWinner({ player, enemy, timerId }) {
     clearTimeout(timerId);
     document.querySelector('#displayText').style.display = 'flex';
