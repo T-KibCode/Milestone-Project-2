@@ -322,8 +322,6 @@ window.addEventListener('keyup', (event) => {
             enemy.isAttacking = true;
             break;
 
-
-
     }
 
 });

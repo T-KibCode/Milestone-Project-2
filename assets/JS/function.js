@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth < 1000) {
         alert(" THIS GAME IS NOT SUPPORTED ON MOBILE/TABLET DEVICES. PLEASE ACCESS THE SITE THROUGH A DESKTOP COMPUTER WITH KEYBOARD. ");
@@ -7,7 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //* rectangular collision relating to the hitboxes of the sprites attack animations in relation to the opposing sprite *// 
 
-function rectangularCollision({ rectangle1, rectangle2 }) {
+function rectangularCollision({
+    rectangle1,
+    rectangle2
+}) {
     return (
         rectangle1.attackBox.position.x + rectangle1.attackBox.width >=
         rectangle2.position.x &&
@@ -20,7 +22,11 @@ function rectangularCollision({ rectangle1, rectangle2 }) {
 }
 
 //* function that determines the winner of the game when condition is met *//
-function determineWinner({ player, enemy, timerId }) {
+function determineWinner({
+    player,
+    enemy,
+    timerId
+}) {
     clearTimeout(timerId);
     document.querySelector('#displayText').style.display = 'flex';
     if (player.health === enemy.health) {
@@ -35,6 +41,7 @@ function determineWinner({ player, enemy, timerId }) {
 //* function that tracks *// 
 let timer = 60;
 let timerId;
+
 function decreaseTimer() {
     if (timer > 0) {
         timerId = setTimeout(decreaseTimer, 1000);
@@ -43,9 +50,14 @@ function decreaseTimer() {
     }
 
     if (timer === 0) {
-        determineWinner({ player, enemy, timerId });
+        determineWinner({
+            player,
+            enemy,
+            timerId
+        });
     }
 }
+
 window.addEventListener('resize', function (event) {
     if (window.innerWidth < 938) {
         document.getElementById('element-to-hide').style.display = 'none';
