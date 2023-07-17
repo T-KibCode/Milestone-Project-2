@@ -6,9 +6,11 @@ Github Repo Link [Milestone Project 2](https://github.com/T-KibCode/Milestone-Pr
 
 Deployed Website: [Deadly Combat](https://t-kibcode.github.io/Milestone-Project-2/)
 
-![Screen shot of responsive website](https://github.com/T-KibCode/Milestone-Project-2/blob/main/assets/Screenshot%202023-07-16%20at%2019.15.21.png)
+![Screen shot of responsive website](https://github.com/T-KibCode/Milestone-Project-2/blob/main/assets/screenshot2.png)
 
-![Upload of game within browser](https://github.com/T-KibCode/Milestone-Project-2/blob/main/Screenshot%202023-07-16%20at%2022.08.26.png)
+![Screen shot of responsive website with error message being provided through javascript](https://github.com/T-KibCode/Milestone-Project-2/blob/main/assets/screenshot3.png)
+
+![Upload of game within browser](https://github.com/T-KibCode/Milestone-Project-2/blob/main/assets/screenshot1.png)
 # Introduction
 
 This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
