@@ -42,7 +42,7 @@ const player = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: './assets/GenichiroAssets/Idle right.png',
+    imageSrc: './assets/GenichiroAssets/Idleright.png',
     framesMax: 8,
     scale: 2.5,
     offset: {
@@ -51,24 +51,24 @@ const player = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/GenichiroAssets/Idle right.png',
+            imageSrc: './assets/GenichiroAssets/Idleright.png',
             framesMax: 8
         },
         run1: {
-            imageSrc: './assets/GenichiroAssets/Run right.png',
+            imageSrc: './assets/GenichiroAssets/Runright.png',
             framesMax: 8,
 
         },
         jump: {
-            imageSrc: './assets/GenichiroAssets/Jump right.png',
+            imageSrc: './assets/GenichiroAssets/Jumpright.png',
             framesMax: 2,
         },
         fall: {
-            imageSrc: './assets/GenichiroAssets/Fall right.png',
+            imageSrc: './assets/GenichiroAssets/Fallright.png',
             framesMax: 2,
         },
         attack1: {
-            imageSrc: './assets/GenichiroAssets/Attack1 right.png',
+            imageSrc: './assets/GenichiroAssets/Attack1right.png',
             framesMax: 6,
         }
     },
@@ -99,7 +99,7 @@ const enemy = new Fighter({
         x: -50,
         y: 0
     },
-    imageSrc: './assets/IsshinAssets/Idle left.png',
+    imageSrc: './assets/IsshinAssets/Idleleft.png',
     framesMax: 4,
     scale: 2.5,
     offset: {
@@ -108,24 +108,24 @@ const enemy = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './assets/IsshinAssets/Idle left.png',
+            imageSrc: './assets/IsshinAssets/Idleleft.png',
             framesMax: 4
         },
         run1: {
-            imageSrc: './assets/IsshinAssets/Run-left.png',
+            imageSrc: './assets/IsshinAssets/Runleft.png',
             framesMax: 8,
 
         },
         jump: {
-            imageSrc: './assets/IsshinAssets/Jump left.png',
+            imageSrc: './assets/IsshinAssets/Jumpleft.png',
             framesMax: 2,
         },
         fall: {
-            imageSrc: './assets/IsshinAssets/Fall left.png',
+            imageSrc: './assets/IsshinAssets/Fallleft.png',
             framesMax: 2,
         },
         attack1: {
-            imageSrc: './assets/IsshinAssets/Attack1 left.png',
+            imageSrc: './assets/IsshinAssets/Attack1left.png',
             framesMax: 4,
         }
     },
