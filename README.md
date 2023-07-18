@@ -149,9 +149,7 @@ Though the design was based on this color palette,
   
   This project was built on the Gitpod IDE using the Code Institute template found here:<br><https://github.com/Code-Institute-Org/gitpod-full-template>
 
-  I have attempted to deploy this project to GitHub pages, but unfortunately, it has not been recognized with the Jeykll system built into Github pages and therefore will not deploy.
-
-  However, if the following script is run "Run Python script python3 -m http.server" in order to see a preview of the project, you will be able to access the game in its current form.
+  This is currently deployed to the above hyperlink using github pages. 
 
 #### Automated Testing
 
