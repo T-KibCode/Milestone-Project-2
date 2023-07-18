@@ -73,7 +73,6 @@ Though the design was based on this color pallete,
 </details>
 
 <details>
-##### Features
   
 ### Responsive  Website
 
