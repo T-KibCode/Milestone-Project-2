@@ -58,9 +58,11 @@ This is because within the parameters of this particular gaming medium, we find 
 
 Due to having some free assets that I aqquired online from website [https://itch.io/](https://itch.io/),  I had a clear colour pallette style within the canvas window that I wanted to be the main focus with a combination of Blue, Pinks, soft Reds and other colors in the Pastel style.
 
-[/assets/colorpallete.png]
+[/assets/colorpallete.png](https://github.com/T-KibCode/Milestone-Project-2/blob/main/assets/colorpallete.png)
 
 With this in mind, the background colour was going to be fairly static in theme with this and I ended up on a pastel pink background color With the game instructions placed above the canvas with the prompt of clicking into the canvas window to load the game.
+
+Though the design was based on this color pallete, 
 
 ##### Wireframes
 
@@ -85,25 +87,34 @@ With this in mind, the background colour was going to be fairly static in theme 
 
 ### Timer
 
-  The timer in the game runs within a loop that checks to determine whether either players health has reduced in to zero therefore stopping the timer, or checks the health of both players at the end of the match to determine who posses mmore health and will then declare this person the victor.
+  The timer in the game runs within a loop that checks to determine whether either player's health has reduced to zero therefore stopping the timer, or checks the health of both players at the end of the match to determine who possesses more health and will then declare this person the victor.
 
 ### Victory message
 
-  When a player fufills one of the win conditions of the game a victory message will appear declaring that player the victor whetehr that be at the end of the timer or a unanimous victory before the timer has run down.
+  When a player fulfills one of the win conditions of the game a victory message will appear declaring that player the victor whether that be at the end of the timer or a unanimous victory before the timer has run down.
 
-  In the event that the players Health bar matches, it will be declared a draw once the timer has run down to zero.
+  In the event that the player's Health bar matches, it will be declared a draw once the timer has run down to zero.
 
 ### Possible Future Features
 
-  It was my original intent to Allow the game to use an opaque overlay in order to be able to play the devce on mobile devices.
+  It was my original intent to Allow the game to use an opaque overlay in order to be able to play the device on mobile devices.
 
-  However during the design process, it became very quickly apprant that allowing the website in a mobile or tablet function would be extremely difficult due to having to map a button overlay on top, and as I had originally designed the game to be playable by two human players without a CPU controlled enemy, I was unfortunately unable to integrate a method to do this over mobile/tablet devices due to not having designed a CPU based opponent in the code.
+  However during the design process, it became very quickly apparent that allowing the website in a mobile or tablet function would be extremely difficult due to having to map a button overlay on top, and as I had originally designed the game to be playable by two human players without a CPU controlled enemy, I was unfortunately unable to integrate a method to do this over mobile/tablet devices due to not having designed a CPU based opponent in the code.
 
-  Due to a lack of time, this was not a function that I was able to integrate at this moment in time, however I do plan to revisit this once the course has been completed to be able to design a very basic CPU opponent within the game function and allow players to be able to have a choice between a second player or a CPU opponent.
+  Due to a lack of time, this was not a function that I was able to integrate at this moment in time, however, I do plan to revisit this once the course has been completed to be able to design a very basic CPU opponent within the game function and allow players to be able to have a choice between a second player or a CPU opponent.
 
-  Ideally, being able to reproduce this game within an app format with an Overlay of controls would allow for us to expand and allow for network play, whether that be remote or using the internet respectively. This would provide the option to expand the project in order to play with multiple friends using multiple devices.
+  Ideally, being able to reproduce this game within an app format with an Overlay of controls would allow us to expand and allow for network play, whether that be remote or using the internet respectively. This would provide the option to expand the project in order to play with multiple friends using multiple devices.
 
-  However, this would require creating a backend system, and having server space in order to accomedate the use of the game, whilst also having space to introduce new features, such as user accounts, top scores and options to save certain user settings such as toggling HUD UI options as an exmaple.
+  However, this would require creating a backend system, and having server space in order to accommodate the use of the game, whilst also having space to introduce new features, such as user accounts, top scores, and options to save certain user settings such as toggling HUD UI options as an example.
+
+
+### Noted error messages
+
+  The main error message that is produced when the page is live is that the is a key error pressed when either button assigned to a jump function is used. However, this occurs as the players are allowed to move side to side when in motion whilst ascending/descending within the game. This meant that I could not lock the actions in a way that would prevent the other key from reactivating without a key press as I had down the left and right movements respectively. 
+
+  This fortunately does not impact the game working itself within the browser and simply references the key press being undefined (even though the action is defined within its own function). 
+
+  It is a noted error that is produced but not one with an inherent negative effect on the game itself, thus I have opted to leave the error as is. 
   
   </details>
 
