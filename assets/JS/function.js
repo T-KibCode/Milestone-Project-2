@@ -65,3 +65,4 @@ window.addEventListener('resize', function (event) {
         document.getElementById('element-to-hide').style.display = 'block';
     }
 });
+
